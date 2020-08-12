@@ -22,7 +22,7 @@ interface NewsAPI {
         suspend fun searchNews(
                 @Query("q")
                 searchQuery: String,
-                @Query("page")
+                @Query("page")                                         
                 pageNumber: Int = 1,
                 @Query("apiKey")
                 apiKey: String = API_KEY
