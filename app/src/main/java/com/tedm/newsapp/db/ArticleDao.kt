@@ -2,7 +2,7 @@ package com.tedm.newsapp.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.tedm.newsapp.Article
+import com.tedm.newsapp.models.Article
 
 @Dao
 interface ArticleDao {

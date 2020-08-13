@@ -1,7 +1,7 @@
 package com.tedm.newsapp.db
 
 import androidx.room.TypeConverter
-import com.tedm.newsapp.Source
+import com.tedm.newsapp.models.Source
 
 class Converters {
     @TypeConverter
@@ -10,7 +10,7 @@ class Converters {
     }
 
     @TypeConverter
-    fun toSource(name: String): Source{
+    fun toSource(name: String): Source {
         return Source(name, name)
     }
 }

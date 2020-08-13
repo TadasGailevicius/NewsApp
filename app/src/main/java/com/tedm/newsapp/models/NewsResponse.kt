@@ -1,4 +1,6 @@
-package com.tedm.newsapp
+package com.tedm.newsapp.models
+
+import com.tedm.newsapp.models.Article
 
 data class NewsResponse(
     val articles: List<Article>,

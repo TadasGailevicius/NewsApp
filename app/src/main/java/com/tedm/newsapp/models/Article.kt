@@ -1,4 +1,4 @@
-package com.tedm.newsapp
+package com.tedm.newsapp.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
