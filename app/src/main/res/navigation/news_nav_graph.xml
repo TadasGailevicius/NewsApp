@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
-    app:startDestination="@id/breakingNewsFragment">
+    app:startDestination="@id/newsFragment">
 
     <fragment
-        android:id="@+id/breakingNewsFragment"
+        android:id="@+id/newsFragment"
         android:name="com.tedm.newsapp.ui.fragments.NewsFragment"
         android:label="NewsFragment" >
         <action
-            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            android:id="@+id/action_newsFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
