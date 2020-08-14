@@ -4,5 +4,6 @@ import androidx.fragment.app.Fragment
 import com.tedm.newsapp.R
 
 class NewsFragment : Fragment(R.layout.activity_main) {
+    
 
 }
