@@ -8,6 +8,7 @@ import com.tedm.newsapp.MainActivity
 import com.tedm.newsapp.R
 import com.tedm.newsapp.adapters.NewsAdapter
 import com.tedm.newsapp.ui.NewsViewModel
+import kotlinx.android.synthetic.main.fragment_news.*
 
 class NewsFragment : Fragment(R.layout.activity_main) {
 
@@ -21,7 +22,7 @@ class NewsFragment : Fragment(R.layout.activity_main) {
 
     private fun setupRecyclerView() {
         newsAdapter = NewsAdapter()
-        rvBreakingNews.apply {
+        rvNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
         }
