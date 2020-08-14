@@ -13,7 +13,7 @@ import com.tedm.newsapp.ui.NewsViewModel
 import com.tedm.newsapp.util.Resource
 import kotlinx.android.synthetic.main.fragment_news.*
 
-class NewsFragment : Fragment(R.layout.activity_main) {
+class NewsFragment : Fragment(R.layout.fragment_news) {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
