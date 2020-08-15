@@ -19,9 +19,11 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
         val article = args.article
-        webView.apply {
-            webViewClient = WebViewClient()
-            loadUrl(article.url)
-        }
+
+        fragment_article_title.text = article.title
+        fragment_article_description.text = article.description
+        fragment_article_author.text = article.author
+        fragment_article_date.text = article.publishedAt
+
     }
 }
