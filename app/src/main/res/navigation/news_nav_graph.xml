@@ -14,5 +14,9 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.tedm.newsapp.ui.fragments.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.tedm.newsapp.models.Article" />
+    </fragment>
 </navigation>
