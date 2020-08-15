@@ -23,6 +23,7 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="40dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutExpandedTextStyle"
             >
 
             <ImageView

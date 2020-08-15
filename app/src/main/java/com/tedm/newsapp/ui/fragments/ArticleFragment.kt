@@ -1,8 +1,10 @@
 package com.tedm.newsapp.ui.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -21,6 +23,8 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
+        collapsingToolbar.setTitle("OnBoardAppMVP")
+        collapsingToolbar.setCollapsedTitleTextColor(Color.WHITE)
         val article = args.article
 
         Glide.with(this).load(article.urlToImage).into(fragment_article_image)
