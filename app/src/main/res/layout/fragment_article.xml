@@ -21,10 +21,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:elevation="7dp"></androidx.appcompat.widget.Toolbar>
+            android:elevation="7dp">
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-
 
     <TextView
         android:id="@+id/fragment_article_title"
