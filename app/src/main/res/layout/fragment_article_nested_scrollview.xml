@@ -19,6 +19,7 @@
             android:layout_marginTop="8dp"
             android:maxLines="3"
             android:text="Title"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
