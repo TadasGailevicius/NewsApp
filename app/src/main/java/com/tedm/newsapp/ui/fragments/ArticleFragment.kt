@@ -26,7 +26,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
-        collapsingToolbar.setTitle("OnBoardAppMVP")
+        collapsingToolbar.setTitle("OnBoardAppMVVM")
         collapsingToolbar.setCollapsedTitleTextColor(Color.WHITE)
         val article = args.article
 
