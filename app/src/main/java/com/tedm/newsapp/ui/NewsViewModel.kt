@@ -16,6 +16,7 @@ class NewsViewModel(
 
     val news: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var newsPage = 1
+    var newsResponse: NewsResponse? = null
 
     init {
         getNews("lt")
@@ -31,6 +32,14 @@ class NewsViewModel(
     private fun handleNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
         if(response.isSuccessful) {
             response.body()?.let { resultResponse ->
+                newsPage++
+                if(newsResponse == null){
+                    newsResponse = resultResponse
+                } else {
+                    val oldArticles = newsResponse?.articles
+                    val newArticles = resultResponse.articles
+                }
+
                 return Resource.Success(resultResponse)
             }
         }
