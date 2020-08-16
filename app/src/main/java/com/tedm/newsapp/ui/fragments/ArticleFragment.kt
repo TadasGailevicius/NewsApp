@@ -1,6 +1,8 @@
 package com.tedm.newsapp.ui.fragments
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
@@ -32,6 +34,14 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         fragment_article_description.text = article.description
         fragment_article_author.text = article.author
         fragment_article_date.text = article.publishedAt
+
+        fragment_article_button.setOnClickListener{
+            val openURL = Intent(Intent.ACTION_VIEW)
+            openURL.data = Uri.parse(article.url);
+            startActivity(openURL)
+        }
+
+
 
     }
 }
