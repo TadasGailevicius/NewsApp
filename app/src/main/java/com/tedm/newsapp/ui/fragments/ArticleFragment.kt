@@ -16,6 +16,7 @@ import com.tedm.newsapp.ui.NewsViewModel
 import kotlinx.android.synthetic.main.fragment_article.*
 import kotlinx.android.synthetic.main.fragment_article_nested_scrollview.*
 import kotlinx.android.synthetic.main.item_article.view.*
+import java.text.SimpleDateFormat
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {
 
@@ -33,7 +34,12 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         fragment_article_title.text = article.title
         fragment_article_description.text = article.description
         fragment_article_author.text = article.author
-        fragment_article_date.text = article.publishedAt
+
+        val parser =  SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        val formatter = SimpleDateFormat("yyyy.MM.dd HH:mm")
+        val formattedDate = formatter.format(parser.parse(article.publishedAt))
+
+        fragment_article_date.text = formattedDate
 
         fragment_article_button.setOnClickListener{
             val openURL = Intent(Intent.ACTION_VIEW)
