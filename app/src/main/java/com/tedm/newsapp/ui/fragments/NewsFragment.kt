@@ -48,6 +48,9 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
                         newsAdapter.differ.submitList(newsResponse.articles.toList())
                         val totalPages = newsResponse.totalResults / QUERY_PAGE_SIZE + 2
                         isLastPage = viewModel.newsPage == totalPages
+                        if(isLastPage) {
+                            rvNews.setPadding(0,0,0,0)
+                        }
                     }
                 }
                 is Resource.Error -> {
@@ -97,8 +100,6 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
             if(shouldPaginate) {
                 viewModel.getNews("lt")
                 isScrolling = false
-            } else {
-                rvNews.setPadding(0, 0, 0, 0)
             }
         }
 
