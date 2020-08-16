@@ -38,9 +38,11 @@ class NewsViewModel(
                 } else {
                     val oldArticles = newsResponse?.articles
                     val newArticles = resultResponse.articles
+                    oldArticles?.addAll(newArticles)
+
                 }
 
-                return Resource.Success(resultResponse)
+                return Resource.Success(newsResponse ?: resultResponse)
             }
         }
         return Resource.Error(response.message())
