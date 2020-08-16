@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.tedm.newsapp.R
 import com.tedm.newsapp.models.Article
 import kotlinx.android.synthetic.main.item_article.view.*
+import java.text.SimpleDateFormat
 
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
@@ -48,7 +49,12 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
             Glide.with(this).load(article.urlToImage).into(item_article_image)
             item_article_title.text = article.title
             item_article_description.text = article.description
-            item_article_date.text = article.publishedAt
+
+            val parser =  SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+            val formatter = SimpleDateFormat("yyyy.MM.dd HH:mm")
+            val formattedDate = formatter.format(parser.parse(article.publishedAt))
+
+            item_article_date.text = formattedDate
             setOnClickListener{
                 onItemClickListener?.let { it(article)}
             }
